@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admission Requirements</title>
+
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9;}
+    header {background:#004080; color:white; padding:20px; text-align:center;}
+    nav {background:#0066cc; padding:20px; display:flex; gap:20px; overflow-x:auto; white-space:nowrap;}
+    nav a {color:white; text-decoration:none; font-weight:bold; padding:5px 10px; flex-shrink:0;}
+    nav a:hover {text-decoration:underline;}
+    section {padding:40px 20px;}
+    ul {line-height:1.8;}
+    .details {display:none; margin-top:10px; padding:10px; background:white; border-radius:6px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+    button {padding:8px 15px; background:#004080; color:white; border:none; border-radius:5px; cursor:pointer; margin-top:10px;}
+    button:hover {background:#0066cc;}
+    footer {background:#004080; color:white; text-align:center; padding:10px; margin-top:20px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Admission Requirements</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="courses.html">Courses</a>
+    <a href="admission.html">Admission</a>
+    <a href="register.html">Register</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="faq.html">FAQs</a>
+  </nav>
+
+  <section>
+    <h2>General Requirements</h2>
+    <ul>
+      <li>Completed application form</li>
+      <li>High school diploma or equivalent</li>
+      <li>Official transcripts</li>
+      <li>Two recommendation letters</li>
+      <li>Proof of English proficiency (for international students)</li>
+    </ul>
+
+    <button onclick="toggleDetails()">View Detailed Information</button>
+    <div id="details" class="details">
+      <h3>Additional Notes:</h3>
+      <p>Applicants are encouraged to submit all documents before the admission deadline. International students must provide valid passports and visa details.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Educational Institution. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleDetails() {
+      let box = document.getElementById("details");
+      if (box.style.display === "none" || box.style.display === "") {
+        box.style.display = "block";
+      } else {
+        box.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

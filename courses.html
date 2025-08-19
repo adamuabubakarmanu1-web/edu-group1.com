@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses Offered</title>
+
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9;}
+    header {background:#004080; color:white; padding:20px; text-align:center;}
+    nav {background:#0066cc; padding:20px; display:flex; gap:20px; overflow-x:auto; white-space:nowrap;}
+    nav a {color:white; text-decoration:none; font-weight:bold; padding:5px 10px; flex-shrink:0;}
+    nav a:hover {text-decoration:underline;}
+    section {padding:40px 20px;}
+    .course {background:white; padding:15px; margin-bottom:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
+    .course h3 {margin:0 0 10px;}
+    .hidden {display:none; color:#333; margin-top:10px;}
+    button {padding:8px 15px; background:#004080; color:white; border:none; border-radius:5px; cursor:pointer;}
+    button:hover {background:#0066cc;}
+    footer {background:#004080; color:white; text-align:center; padding:10px; margin-top:20px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Courses Offered</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="courses.html">Courses</a>
+    <a href="admission.html">Admission</a>
+    <a href="register.html">Register</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="faq.html">FAQs</a>
+  </nav>
+
+  <section>
+    <div class="course">
+      <h3>Computer Science</h3>
+      <p>Learn programming, databases, and networks.</p>
+      <button onclick="toggleInfo('cs')">Read More</button>
+      <p id="cs" class="hidden">This program covers software engineering, web development, AI, and cybersecurity.</p>
+    </div>
+
+    <div class="course">
+      <h3>Business Administration</h3>
+      <p>Understand business management and leadership.</p>
+      <button onclick="toggleInfo('ba')">Read More</button>
+      <p id="ba" class="hidden">Includes finance, marketing, entrepreneurship, and organizational leadership.</p>
+    </div>
+
+    <div class="course">
+      <h3>Education</h3>
+      <p>Prepare for a career in teaching and training.</p>
+      <button onclick="toggleInfo('edu')">Read More</button>
+      <p id="edu" class="hidden">Focus on pedagogy, curriculum design, and classroom management skills.</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Educational Institution. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    function toggleInfo(id) {
+      let el = document.getElementById(id);
+      if (el.style.display === "none" || el.style.display === "") {
+        el.style.display = "block";
+      } else {
+        el.style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>

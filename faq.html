@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs</title>
+
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9;}
+    header {background:#004080; color:white; padding:20px; text-align:center;}
+    nav {background:#0066cc; padding:20px; display:flex; gap:20px; overflow-x:auto; white-space:nowrap;}
+    nav a {color:white; text-decoration:none; font-weight:bold; padding:5px 10px; flex-shrink:0;}
+    nav a:hover {text-decoration:underline;}
+
+    section {padding:40px 20px; max-width:900px; margin:auto;}
+    h2 {text-align:center; color:#004080; margin-bottom:30px;}
+
+    .faq-item {
+      background:white; margin-bottom:10px; border-radius:8px;
+      box-shadow:0 2px 5px rgba(0,0,0,0.1); overflow:hidden;
+    }
+    .faq-question {
+      background:#0066cc; color:white; padding:15px; cursor:pointer;
+      font-weight:bold; border:none; width:100%; text-align:left;
+    }
+    .faq-answer {
+      display:none; padding:15px; background:#fff; color:#333;
+    }
+
+    footer {background:#004080; color:white; text-align:center; padding:10px; margin-top:20px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Frequently Asked Questions</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="courses.html">Courses</a>
+    <a href="admission.html">Admission</a>
+    <a href="register.html">Register</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="faq.html">FAQs</a>
+  </nav>
+
+  <section>
+    <h2>Have Questions? We Have Answers!</h2>
+
+    <div class="faq-item">
+      <button class="faq-question">How do I apply for admission?</button>
+      <div class="faq-answer">
+        <p>You can apply online through the "Register" page by filling the admission form and submitting your details.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">What courses are available?</button>
+      <div class="faq-answer">
+        <p>We offer a variety of undergraduate and postgraduate courses. Visit the "Courses" page for details.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Do you provide scholarships?</button>
+      <div class="faq-answer">
+        <p>Yes, we provide merit-based and need-based scholarships. Check the "Admission" page for eligibility.</p>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question">Can I register online?</button>
+      <div class="faq-answer">
+        <p>Absolutely! Our registration process is fully online via the "Register" page.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Educational Institution. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const questions = document.querySelectorAll(".faq-question");
+    questions.forEach(q => {
+      q.addEventListener("click", () => {
+        const answer = q.nextElementSibling;
+        answer.style.display = (answer.style.display === "block") ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+</html>

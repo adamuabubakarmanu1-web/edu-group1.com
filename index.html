@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Educational Website - Home</title>
+
+  <style>
+    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9;}
+    header {background:#004080; color:white; padding:20px; text-align:center;}
+    nav {background:#0066cc; padding:20px; display:flex; flex-wrap:nowrap; justify-content:start; gap:20px; overflow-x:auto; white-space:nowrap;}
+    nav a {color:white; text-decoration:none; font-weight:bold; padding:5px 10px; flex-shrink:0;}
+    nav a:hover {text-decoration:underline;}
+    section {padding:60px 20px; text-align:center;}
+    button {padding:10px 20px; background:#004080; color:white; border:none; border-radius:5px; cursor:pointer;}
+    button:hover {background:#0066cc;}
+    footer {background:#004080; color:white; text-align:center; padding:10px; margin-top:20px;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Educational Institution</h1>
+    <p>Learning Today, Leading Tomorrow</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="courses.html">Courses</a>
+    <a href="admission.html">Admission</a>
+    <a href="register.html">Register</a>
+    <a href="news.html">News</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="faq.html">FAQs</a>
+  </nav>
+
+  <section>
+    <h2>Welcome Message</h2>
+    <p>Our institution is dedicated to providing world-class education to students around the globe.</p>
+    <button id="learnBtn">Learn More</button>
+    <p id="extraMsg" style="display:none; margin-top:15px; color:#333; font-weight:bold;"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Educational Institution. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("learnBtn").addEventListener("click", function() {
+      document.getElementById("extraMsg").style.display = "block";
+      document.getElementById("extraMsg").innerText = "Thank you for visiting! Explore our courses and register today.";
+    });
+  </script>
+</body>
+</html>
