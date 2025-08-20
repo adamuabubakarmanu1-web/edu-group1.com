@@ -5,25 +5,99 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admission Requirements</title>
 
+  <!-- ===== Internal CSS ===== -->
   <style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9;}
-    header {background:#004080; color:white; padding:20px; text-align:center;}
-    nav {background:#0066cc; padding:20px; display:flex; gap:20px; overflow-x:auto; white-space:nowrap;}
-    nav a {color:white; text-decoration:none; font-weight:bold; padding:5px 10px; flex-shrink:0;}
-    nav a:hover {text-decoration:underline;}
-    section {padding:40px 20px;}
-    ul {line-height:1.8;}
-    .details {display:none; margin-top:10px; padding:10px; background:white; border-radius:6px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-    button {padding:8px 15px; background:#004080; color:white; border:none; border-radius:5px; cursor:pointer; margin-top:10px;}
-    button:hover {background:#0066cc;}
-    footer {background:#004080; color:white; text-align:center; padding:10px; margin-top:20px;}
+    /* Babban jikin shafi */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9; /* Fari mai haske */
+    }
+
+    /* Header (Taken shafi) */
+    header {
+      background: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background: #0066cc;
+      padding: 20px;
+      display: flex;         /* Shirya links a layi daya */
+      gap: 20px;             /* Tazara tsakanin links */
+      overflow-x: auto;      /* Idan sunyi yawa a iya ja horizontal */
+      white-space: nowrap;   /* Kada su sauka ƙasa */
+    }
+
+    /* Links */
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      flex-shrink: 0; /* Kada su matsu idan screen ya yi ƙanƙanta */
+    }
+
+    nav a:hover {
+      text-decoration: underline; /* Hover effect */
+    }
+
+    /* Babban section */
+    section {
+      padding: 40px 20px;
+    }
+
+    /* Jerin abubuwa */
+    ul {
+      line-height: 1.8; /* Ƙara tazara tsakanin jerin items */
+    }
+
+    /* Details box (an ɓoye shi da farko) */
+    .details {
+      display: none; /* Ba a nuna shi a farko */
+      margin-top: 10px;
+      padding: 10px;
+      background: white;
+      border-radius: 6px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ƙananan inuwa */
+    }
+
+    /* Button */
+    button {
+      padding: 8px 15px;
+      background: #004080;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #0066cc; /* Sauya launi idan aka hover */
+    }
+
+    /* Footer */
+    footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
+  <!-- ===== Header ===== -->
   <header>
     <h1>Admission Requirements</h1>
   </header>
 
+  <!-- ===== Navigation Bar ===== -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -37,7 +111,9 @@
     <a href="faq.html">FAQs</a>
   </nav>
 
+  <!-- ===== Main Section ===== -->
   <section>
+    <!-- General requirements -->
     <h2>General Requirements</h2>
     <ul>
       <li>Completed application form</li>
@@ -47,23 +123,34 @@
       <li>Proof of English proficiency (for international students)</li>
     </ul>
 
+    <!-- Maballin don bude karin bayani -->
     <button onclick="toggleDetails()">View Detailed Information</button>
+
+    <!-- Ƙarin bayanai (an ɓoye a farko) -->
     <div id="details" class="details">
       <h3>Additional Notes:</h3>
-      <p>Applicants are encouraged to submit all documents before the admission deadline. International students must provide valid passports and visa details.</p>
+      <p>
+        Applicants are encouraged to submit all documents before the admission deadline. 
+        International students must provide valid passports and visa details.
+      </p>
     </div>
   </section>
 
+  <!-- ===== Footer ===== -->
   <footer>
     <p>&copy; 2025 Educational Institution. All Rights Reserved.</p>
   </footer>
 
+  <!-- ===== Internal JavaScript ===== -->
   <script>
+    // Aiki na toggle domin nuna/ɓoye details
     function toggleDetails() {
       let box = document.getElementById("details");
+      // Idan hidden ne sai a nuna
       if (box.style.display === "none" || box.style.display === "") {
         box.style.display = "block";
       } else {
+        // Idan an nuna shi, sai a ɓoye
         box.style.display = "none";
       }
     }
