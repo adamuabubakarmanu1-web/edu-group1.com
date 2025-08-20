@@ -6,27 +6,34 @@
   <title>Gallery</title>
 
   <style>
+    /* ====== General Body Styling ====== */
     body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9;}
+    
+    /* ====== Header ====== */
     header {background:#004080; color:white; padding:20px; text-align:center;}
+    
+    /* ====== Navigation Bar ====== */
     nav {background:#0066cc; padding:20px; display:flex; gap:20px; overflow-x:auto; white-space:nowrap;}
     nav a {color:white; text-decoration:none; font-weight:bold; padding:5px 10px; flex-shrink:0;}
     nav a:hover {text-decoration:underline;}
+
+    /* ====== Section Styling ====== */
     section {padding:40px 20px; max-width:1000px; margin:auto;}
 
-    /* Gallery Grid */
+    /* ====== Gallery Grid ====== */
     .gallery {
       display:grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* images za su cika grid */
       gap:15px;
     }
     .gallery img {
-      width:100%; height:200px; object-fit:cover;
+      width:100%; height:200px; object-fit:cover; /* kada hoto ya fita daga box */
       border-radius:8px; cursor:pointer;
       transition:0.3s;
     }
-    .gallery img:hover {transform:scale(1.05);}
+    .gallery img:hover {transform:scale(1.05);} /* zoom in effect on hover */
 
-    /* Modal */
+    /* ====== Modal (big image popup) ====== */
     .modal {
       display:none; position:fixed; z-index:1000; top:0; left:0; width:100%; height:100%;
       background:rgba(0,0,0,0.8); justify-content:center; align-items:center;
@@ -38,14 +45,17 @@
       position:absolute; top:20px; right:30px; font-size:30px; color:white; cursor:pointer;
     }
 
+    /* ====== Footer ====== */
     footer {background:#004080; color:white; text-align:center; padding:10px; margin-top:20px;}
   </style>
 </head>
 <body>
+  <!-- ====== Page Header ====== -->
   <header>
     <h1>Gallery</h1>
   </header>
 
+  <!-- ====== Navigation Menu ====== -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -59,9 +69,11 @@
     <a href="faq.html">FAQs</a>
   </nav>
 
+  <!-- ====== Gallery Section ====== -->
   <section>
     <h2>Our School Activities</h2>
     <div class="gallery">
+      <!-- hotuna da aka saka cikin gallery -->
       <img src="FB_IMG_17556420504149411.jpg" alt="Classroom" onclick="openModal(this)">
       <img src="FB_IMG_17556421765756520.jpg" alt="Library" onclick="openModal(this)">
       <img src="FB_IMG_17556424100134873.jpg" alt="Laboratory" onclick="openModal(this)">
@@ -71,21 +83,25 @@
     </div>
   </section>
 
-  <!-- Modal -->
+  <!-- ====== Modal for Enlarged Image ====== -->
   <div id="imgModal" class="modal" onclick="closeModal()">
     <span class="close" onclick="closeModal()">&times;</span>
     <img id="modalImg" src="">
   </div>
 
+  <!-- ====== Footer ====== -->
   <footer>
     <p>&copy; 2025 Educational Institution. All Rights Reserved.</p>
   </footer>
 
   <script>
+    /* ====== Function to Open Modal and Show Clicked Image ====== */
     function openModal(img) {
       document.getElementById("imgModal").style.display = "flex";
       document.getElementById("modalImg").src = img.src;
     }
+
+    /* ====== Function to Close Modal ====== */
     function closeModal() {
       document.getElementById("imgModal").style.display = "none";
     }
