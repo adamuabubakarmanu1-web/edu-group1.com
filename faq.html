@@ -1,40 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FAQs</title>
+  <meta charset="UTF-8"> <!-- Yin amfani da UTF-8 encoding don rubutu -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Don responsiveness a wayar hannu -->
+  <title>FAQs</title> <!-- Taken shafin -->
 
   <style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9;}
-    header {background:#004080; color:white; padding:20px; text-align:center;}
-    nav {background:#0066cc; padding:20px; display:flex; gap:20px; overflow-x:auto; white-space:nowrap;}
-    nav a {color:white; text-decoration:none; font-weight:bold; padding:5px 10px; flex-shrink:0;}
-    nav a:hover {text-decoration:underline;}
+    /* ====== CSS Styling ====== */
+    body {
+      font-family: Arial, sans-serif; /* Nau'in font */
+      margin:0; /* Babu margin */
+      padding:0; /* Babu padding */
+      background:#f9f9f9; /* Launin background mai haske */
+    }
 
-    section {padding:40px 20px; max-width:900px; margin:auto;}
-    h2 {text-align:center; color:#004080; margin-bottom:30px;}
+    header {
+      background:#004080; /* Shuɗi mai duhu */
+      color:white; /* Rubutu fari */
+      padding:20px;
+      text-align:center; /* Rubutu a tsakiya */
+    }
+
+    nav {
+      background:#0066cc; /* Shuɗi mai haske */
+      padding:20px;
+      display:flex; /* Yin amfani da flexbox don jera links */
+      gap:20px; /* Tazarar tsakanin links */
+      overflow-x:auto; /* Idan sun yi yawa, sai scroll */
+      white-space:nowrap; /* Kada su karye zuwa layi */
+    }
+
+    nav a {
+      color:white; /* Link fari */
+      text-decoration:none; /* Babu underline */
+      font-weight:bold; /* Rubutu bold */
+      padding:5px 10px;
+      flex-shrink:0; /* Kada link ya matse */
+    }
+
+    nav a:hover {
+      text-decoration:underline; /* Ƙara underline idan an hover */
+    }
+
+    section {
+      padding:40px 20px;
+      max-width:900px; /* Iyakar faɗin section */
+      margin:auto; /* A tsakiya */
+    }
+
+    h2 {
+      text-align:center;
+      color:#004080; /* Shuɗi mai duhu */
+      margin-bottom:30px;
+    }
 
     .faq-item {
-      background:white; margin-bottom:10px; border-radius:8px;
-      box-shadow:0 2px 5px rgba(0,0,0,0.1); overflow:hidden;
-    }
-    .faq-question {
-      background:#0066cc; color:white; padding:15px; cursor:pointer;
-      font-weight:bold; border:none; width:100%; text-align:left;
-    }
-    .faq-answer {
-      display:none; padding:15px; background:#fff; color:#333;
+      background:white; /* Background fari */
+      margin-bottom:10px;
+      border-radius:8px; /* Kusurwoyi zagaye */
+      box-shadow:0 2px 5px rgba(0,0,0,0.1); /* Ƙananan inuwa */
+      overflow:hidden; /* Kada abu ya fita waje */
     }
 
-    footer {background:#004080; color:white; text-align:center; padding:10px; margin-top:20px;}
+    .faq-question {
+      background:#0066cc; /* Shuɗi mai haske */
+      color:white; /* Rubutu fari */
+      padding:15px;
+      cursor:pointer; /* Canza mouse pointer idan aka hover */
+      font-weight:bold; /* Rubutu bold */
+      border:none; /* Babu border */
+      width:100%; /* Ya cika faɗin container */
+      text-align:left; /* Rubutu ya tsaya hagu */
+    }
+
+    .faq-answer {
+      display:none; /* A ɓoye by default */
+      padding:15px;
+      background:#fff; /* Background fari */
+      color:#333; /* Launin rubutu */
+    }
+
+    footer {
+      background:#004080; /* Shuɗi mai duhu */
+      color:white; /* Rubutu fari */
+      text-align:center; /* Rubutu a tsakiya */
+      padding:10px;
+      margin-top:20px;
+    }
   </style>
 </head>
 <body>
+  <!-- ====== Header Section ====== -->
   <header>
     <h1>Frequently Asked Questions</h1>
   </header>
 
+  <!-- ====== Navigation Bar ====== -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -48,9 +109,11 @@
     <a href="faq.html">FAQs</a>
   </nav>
 
+  <!-- ====== Main Section: FAQs ====== -->
   <section>
     <h2>Have Questions? We Have Answers!</h2>
 
+    <!-- FAQ 1 -->
     <div class="faq-item">
       <button class="faq-question">How do I apply for admission?</button>
       <div class="faq-answer">
@@ -58,6 +121,7 @@
       </div>
     </div>
 
+    <!-- FAQ 2 -->
     <div class="faq-item">
       <button class="faq-question">What courses are available?</button>
       <div class="faq-answer">
@@ -65,6 +129,7 @@
       </div>
     </div>
 
+    <!-- FAQ 3 -->
     <div class="faq-item">
       <button class="faq-question">Do you provide scholarships?</button>
       <div class="faq-answer">
@@ -72,24 +137,30 @@
       </div>
     </div>
 
+    <!-- FAQ 4 -->
     <div class="faq-item">
       <button class="faq-question">Can I register online?</button>
       <div class="faq-answer">
         <p>Absolutely! Our registration process is fully online via the "Register" page.</p>
       </div>
     </div>
-
   </section>
 
+  <!-- ====== Footer Section ====== -->
   <footer>
     <p>&copy; 2025 Educational Institution. All Rights Reserved.</p>
   </footer>
 
+  <!-- ====== JavaScript Section ====== -->
   <script>
+    // Neman dukkan buttons masu class "faq-question"
     const questions = document.querySelectorAll(".faq-question");
+
+    // Ƙara event listener ga kowanne button
     questions.forEach(q => {
       q.addEventListener("click", () => {
-        const answer = q.nextElementSibling;
+        const answer = q.nextElementSibling; // Ɗaukar div ɗin da yake biye da button
+        // Toggle tsakanin nuna da ɓoye amsar
         answer.style.display = (answer.style.display === "block") ? "none" : "block";
       });
     });
