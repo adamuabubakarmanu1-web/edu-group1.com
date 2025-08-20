@@ -5,25 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Educational Website - Home</title>
 
+  <!-- ===== Internal CSS (Styling) ===== -->
   <style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9;}
-    header {background:#004080; color:white; padding:20px; text-align:center;}
-    nav {background:#0066cc; padding:20px; display:flex; flex-wrap:nowrap; justify-content:start; gap:20px; overflow-x:auto; white-space:nowrap;}
-    nav a {color:white; text-decoration:none; font-weight:bold; padding:5px 10px; flex-shrink:0;}
-    nav a:hover {text-decoration:underline;}
-    section {padding:60px 20px; text-align:center;}
-    button {padding:10px 20px; background:#004080; color:white; border:none; border-radius:5px; cursor:pointer;}
-    button:hover {background:#0066cc;}
-    footer {background:#004080; color:white; text-align:center; padding:10px; margin-top:20px;}
+    /* Babban jikin page */
+    body {
+      font-family: Arial, sans-serif; /* Nau'in rubutu */
+      margin: 0;  /* Babu tazara daga gefuna */
+      padding: 0; /* Babu padding */
+      background: #f9f9f9; /* Launin baya mai haske */
+    }
+
+    /* Header (sunan makaranta + slogan) */
+    header {
+      background: #004080; /* Launin shudi mai duhu */
+      color: white; /* Rubutu fari */
+      padding: 20px;
+      text-align: center; /* Tsakiyar rubutu */
+    }
+
+    /* Navigation bar */
+    nav {
+      background: #0066cc; /* Launin shudi mai haske */
+      padding: 20px;
+      display: flex;        /* Flexbox domin shirya links */
+      flex-wrap: nowrap;    /* Kada su karye zuwa wani layi */
+      justify-content: start; /* Links daga hagu */
+      gap: 20px;            /* Tazara tsakanin links */
+      overflow-x: auto;     /* Idan ya yi yawa, scrollbar ya fito */
+      white-space: nowrap;  /* Kada rubutu ya sauka ƙasa */
+    }
+
+    /* Links a cikin nav */
+    nav a {
+      color: white;
+      text-decoration: none; /* Kada ya zama underlined */
+      font-weight: bold;     /* Bold text */
+      padding: 5px 10px;
+      flex-shrink: 0;        /* Kada su matsu idan fadi ya yi ƙanƙanta */
+    }
+
+    /* Lokacin mouse ya hau kan link */
+    nav a:hover {
+      text-decoration: underline; /* Ya nuna underline */
+    }
+
+    /* Babban section na cikin page */
+    section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    /* Maballi (button) */
+    button {
+      padding: 10px 20px;
+      background: #004080;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer; /* Alamar hannun mouse */
+    }
+
+    /* Maballi idan an hau kansa */
+    button:hover {
+      background: #0066cc;
+    }
+
+    /* Footer (ƙarshen page) */
+    footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px; /* Ƙarin tazara daga sama */
+    }
   </style>
 </head>
 <body>
+
+  <!-- ===== Header ===== -->
   <header>
     <h1>Welcome to Our Educational Institution</h1>
     <p>Learning Today, Leading Tomorrow</p>
   </header>
 
+  <!-- ===== Navigation bar ===== -->
   <nav>
+    <!-- Links zuwa sauran shafuka -->
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
     <a href="courses.html">Courses</a>
@@ -36,21 +103,33 @@
     <a href="faq.html">FAQs</a>
   </nav>
 
+  <!-- ===== Main Section ===== -->
   <section>
     <h2>Welcome Message</h2>
     <p>Our institution is dedicated to providing world-class education to students around the globe.</p>
+
+    <!-- Maballi da sakon asirce (hidden message) -->
     <button id="learnBtn">Learn More</button>
+
+    <!-- Wannan paragraph za a bayyana shi da JS idan an danna button -->
     <p id="extraMsg" style="display:none; margin-top:15px; color:#333; font-weight:bold;"></p>
   </section>
 
+  <!-- ===== Footer ===== -->
   <footer>
     <p>&copy; 2025 Educational Institution. All Rights Reserved.</p>
   </footer>
 
+  <!-- ===== Internal JavaScript ===== -->
   <script>
+    // Neman button da paragraph a DOM
     document.getElementById("learnBtn").addEventListener("click", function() {
+      // Lokacin da aka danna button, a bayyana hidden paragraph
       document.getElementById("extraMsg").style.display = "block";
-      document.getElementById("extraMsg").innerText = "Thank you for visiting! Explore our courses and register today.";
+
+      // Rubuta sakon da zai bayyana
+      document.getElementById("extraMsg").innerText =
+        "Thank you for visiting! Explore our courses and register today.";
     });
   </script>
 </body>
