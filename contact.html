@@ -5,50 +5,135 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
 
+  <!-- ===== Internal CSS ===== -->
   <style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9;}
-    header {background:#004080; color:white; padding:20px; text-align:center;}
-    nav {background:#0066cc; padding:20px; display:flex; gap:20px; overflow-x:auto; white-space:nowrap;}
-    nav a {color:white; text-decoration:none; font-weight:bold; padding:5px 10px; flex-shrink:0;}
-    nav a:hover {text-decoration:underline;}
-    section {padding:40px 20px; max-width:900px; margin:auto;}
+    /* Babban jikin shafin */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9; /* Light background */
+    }
 
-    h2 {color:#004080; margin-bottom:20px;}
+    /* Header */
+    header {
+      background: #004080; /* Navy blue */
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
 
+    /* Navigation Bar */
+    nav {
+      background: #0066cc; /* Blue */
+      padding: 20px;
+      display: flex;
+      gap: 20px; /* Tazara tsakanin links */
+      overflow-x: auto;  /* Idan links sun yi yawa a iya ja sideways */
+      white-space: nowrap; /* Kada su sauka kasa */
+    }
+
+    /* Navigation Links */
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 5px 10px;
+      flex-shrink: 0; /* Kada su matsu */
+    }
+
+    nav a:hover {
+      text-decoration: underline; /* Hover effect */
+    }
+
+    /* Main section */
+    section {
+      padding: 40px 20px;
+      max-width: 900px; /* Ƙayyade iyaka */
+      margin: auto;     /* Center page */
+    }
+
+    h2 {
+      color: #004080;
+      margin-bottom: 20px;
+    }
+
+    /* Container mai raba info da form */
     .contact-container {
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* biyu column */
+      gap: 20px;
     }
+
+    /* Contact info (hagu) */
     .contact-info {
-      background:white; padding:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1);
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
+
+    /* Contact form (dama) */
     .contact-form {
-      background:white; padding:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1);
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     }
-    label {display:block; margin:10px 0 5px;}
+
+    /* Labels */
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    /* Input da textarea */
     input, textarea {
-      width:100%; padding:10px; margin-bottom:15px;
-      border:1px solid #ccc; border-radius:5px;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
     }
+
+    /* Button */
     button {
-      background:#004080; color:white; padding:10px 20px;
-      border:none; border-radius:5px; cursor:pointer;
+      background: #004080;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
     }
-    button:hover {background:#0066cc;}
 
-    footer {background:#004080; color:white; text-align:center; padding:10px; margin-top:20px;}
+    button:hover {
+      background: #0066cc;
+    }
 
+    /* Footer */
+    footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    /* Mobile responsive */
     @media(max-width:768px) {
-      .contact-container {grid-template-columns: 1fr;}
+      .contact-container {
+        grid-template-columns: 1fr; /* Zai koma column daya */
+      }
     }
   </style>
 </head>
 <body>
+  <!-- ===== Header ===== -->
   <header>
     <h1>Contact Us</h1>
   </header>
 
+  <!-- ===== Navigation ===== -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -62,20 +147,24 @@
     <a href="faq.html">FAQs</a>
   </nav>
 
+  <!-- ===== Main Section ===== -->
   <section>
     <h2>Get in Touch</h2>
     <div class="contact-container">
-      <!-- Contact Info -->
+      <!-- Hagu: Contact Info -->
       <div class="contact-info">
         <h3>Our Address</h3>
         <p>Educational Institution, Main Campus, Abuja - Nigeria</p>
+
         <h3>Phone</h3>
         <p>+234 800 123 4567</p>
+
         <h3>Email</h3>
+        <!-- Nayi amfani da adireshinka da ka bukata (edu-group1.com) -->
         <p>info@edu-group1.com</p>
       </div>
 
-      <!-- Contact Form -->
+      <!-- Dama: Contact Form -->
       <div class="contact-form">
         <form onsubmit="return validateForm()">
           <label for="name">Full Name</label>
@@ -96,21 +185,27 @@
     </div>
   </section>
 
+  <!-- ===== Footer ===== -->
   <footer>
     <p>&copy; 2025 Educational Institution. All Rights Reserved.</p>
   </footer>
 
+  <!-- ===== Internal JavaScript ===== -->
   <script>
+    // Aikin validate don tabbatar da an cike form duka
     function validateForm() {
       let name = document.getElementById("name").value.trim();
       let email = document.getElementById("email").value.trim();
       let subject = document.getElementById("subject").value.trim();
       let message = document.getElementById("message").value.trim();
 
+      // Idan wani bai cika ba
       if (!name || !email || !subject || !message) {
         alert("Please fill in all fields before submitting.");
-        return false;
+        return false; // dakatar da tura form
       }
+
+      // Idan duk an cike
       alert("Message sent successfully!");
       return true;
     }
