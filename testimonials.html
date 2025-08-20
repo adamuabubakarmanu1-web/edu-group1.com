@@ -6,36 +6,71 @@
   <title>Testimonials</title>
 
   <style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9;}
-    header {background:#004080; color:white; padding:20px; text-align:center;}
-    nav {background:#0066cc; padding:20px; display:flex; gap:20px; overflow-x:auto; white-space:nowrap;}
-    nav a {color:white; text-decoration:none; font-weight:bold; padding:5px 10px; flex-shrink:0;}
+    /* ====== General Page Styling ====== */
+    body {
+      font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9;
+    }
+
+    /* ====== Header Styling ====== */
+    header {
+      background:#004080; color:white; padding:20px; text-align:center;
+    }
+
+    /* ====== Navigation Bar Styling ====== */
+    nav {
+      background:#0066cc; padding:20px; display:flex; gap:20px;
+      overflow-x:auto; white-space:nowrap; /* don bada damar scroll a karamin screen */
+    }
+    nav a {
+      color:white; text-decoration:none; font-weight:bold;
+      padding:5px 10px; flex-shrink:0; /* kada link ya matse idan screen ya yi karami */
+    }
     nav a:hover {text-decoration:underline;}
 
-    section {padding:40px 20px; max-width:1100px; margin:auto;}
-    h2 {text-align:center; color:#004080; margin-bottom:30px;}
+    /* ====== Main Section Styling ====== */
+    section {
+      padding:40px 20px; max-width:1100px; margin:auto;
+    }
+    h2 {
+      text-align:center; color:#004080; margin-bottom:30px;
+    }
 
+    /* ====== Testimonials Grid Layout ====== */
     .testimonials {
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap:20px;
+      gap:20px; /* tazara tsakanin cards */
     }
+
+    /* ====== Testimonial Card ====== */
     .card {
       background:white; padding:20px; border-radius:10px;
       box-shadow:0 2px 5px rgba(0,0,0,0.1);
     }
-    .card p {font-style:italic; margin-bottom:15px;}
-    .card h4 {margin:0; color:#004080;}
-    .card span {font-size:0.9em; color:#666;}
+    .card p {
+      font-style:italic; margin-bottom:15px; /* magana ta testimonial */
+    }
+    .card h4 {
+      margin:0; color:#004080; /* sunan mai testimonial */
+    }
+    .card span {
+      font-size:0.9em; color:#666; /* matsayin su (e.g. student, parent) */
+    }
     
-    footer {background:#004080; color:white; text-align:center; padding:10px; margin-top:20px;}
+    /* ====== Footer Styling ====== */
+    footer {
+      background:#004080; color:white; text-align:center;
+      padding:10px; margin-top:20px;
+    }
   </style>
 </head>
 <body>
+  <!-- ====== Page Header ====== -->
   <header>
     <h1>Testimonials</h1>
   </header>
 
+  <!-- ====== Navigation Bar ====== -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -49,32 +84,45 @@
     <a href="faq.html">FAQs</a>
   </nav>
 
+  <!-- ====== Testimonials Section ====== -->
   <section>
     <h2>What Our Students Say</h2>
+
+    <!-- Testimonials Grid -->
     <div class="testimonials">
+
+      <!-- Testimonial 1 -->
       <div class="card">
         <p>"The teachers are very supportive and the learning environment is amazing!"</p>
         <h4>Fatima S.</h4>
         <span>Undergraduate Student</span>
       </div>
+
+      <!-- Testimonial 2 -->
       <div class="card">
         <p>"I gained so much knowledge and confidence. The courses really prepared me for my career."</p>
         <h4>John D.</h4>
         <span>Graduate Student</span>
       </div>
+
+      <!-- Testimonial 3 -->
       <div class="card">
         <p>"As a parent, I’m impressed by the dedication of the staff. My son loves this school."</p>
         <h4>Mrs. Grace A.</h4>
         <span>Parent</span>
       </div>
+
+      <!-- Testimonial 4 -->
       <div class="card">
         <p>"Online registration was smooth and easy. I’m excited to begin my studies here."</p>
         <h4>Ahmed K.</h4>
         <span>New Student</span>
       </div>
+
     </div>
   </section>
 
+  <!-- ====== Footer ====== -->
   <footer>
     <p>&copy; 2025 Educational Institution. All Rights Reserved.</p>
   </footer>
