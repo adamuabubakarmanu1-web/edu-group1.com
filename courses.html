@@ -1,30 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Courses Offered</title>
+  <meta charset="UTF-8"> <!-- Saita character encoding zuwa UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Don mobile responsiveness -->
+  <title>Courses Offered</title> <!-- Taken shafin -->
 
   <style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9;}
-    header {background:#004080; color:white; padding:20px; text-align:center;}
-    nav {background:#0066cc; padding:20px; display:flex; gap:20px; overflow-x:auto; white-space:nowrap;}
-    nav a {color:white; text-decoration:none; font-weight:bold; padding:5px 10px; flex-shrink:0;}
-    nav a:hover {text-decoration:underline;}
-    section {padding:40px 20px;}
-    .course {background:white; padding:15px; margin-bottom:20px; border-radius:8px; box-shadow:0 2px 5px rgba(0,0,0,0.1);}
-    .course h3 {margin:0 0 10px;}
-    .hidden {display:none; color:#333; margin-top:10px;}
-    button {padding:8px 15px; background:#004080; color:white; border:none; border-radius:5px; cursor:pointer;}
-    button:hover {background:#0066cc;}
-    footer {background:#004080; color:white; text-align:center; padding:10px; margin-top:20px;}
+    /* ====== CSS Styling ====== */
+    body {
+      font-family: Arial, sans-serif; /* Nau'in font don rubutu */
+      margin:0; /* Babu margin a jikin page */
+      padding:0; /* Babu padding */
+      background:#f9f9f9; /* Launin background mai haske */
+    }
+
+    header {
+      background:#004080; /* Launin shuɗi mai duhu */
+      color:white; /* Rubutu fari */
+      padding:20px; /* Sarari a ciki */
+      text-align:center; /* Rubutu tsakiyar header */
+    }
+
+    nav {
+      background:#0066cc; /* Launin shuɗi mai haske */
+      padding:20px;
+      display:flex; /* Yin amfani da flexbox don navbar */
+      gap:20px; /* Tazarar links */
+      overflow-x:auto; /* Scrolling idan sun yi yawa */
+      white-space:nowrap; /* Kada link su karye zuwa layi na biyu */
+    }
+
+    nav a {
+      color:white; /* Link fari */
+      text-decoration:none; /* Babu underline */
+      font-weight:bold; /* Bold text */
+      padding:5px 10px;
+      flex-shrink:0; /* Kada link ya rage size */
+    }
+
+    nav a:hover {
+      text-decoration:underline; /* Line idan aka hover */
+    }
+
+    section {
+      padding:40px 20px; /* Sarari a ciki */
+    }
+
+    .course {
+      background:white; /* Background fari don kowane course */
+      padding:15px;
+      margin-bottom:20px; /* Sarari tsakanin courses */
+      border-radius:8px; /* Kusurwoyi zagaye */
+      box-shadow:0 2px 5px rgba(0,0,0,0.1); /* Ƙananan inuwa */
+    }
+
+    .course h3 {
+      margin:0 0 10px; /* Sarari ƙasa da heading */
+    }
+
+    .hidden {
+      display:none; /* Ana ɓoye ta by default */
+      color:#333;
+      margin-top:10px;
+    }
+
+    button {
+      padding:8px 15px;
+      background:#004080; /* Shuɗi mai duhu */
+      color:white; /* Rubutu fari */
+      border:none; /* Babu border */
+      border-radius:5px; /* Kusurwoyi zagaye */
+      cursor:pointer; /* Canza pointer idan aka hover */
+    }
+
+    button:hover {
+      background:#0066cc; /* Shuɗi mai haske idan aka hover */
+    }
+
+    footer {
+      background:#004080; /* Shuɗi mai duhu */
+      color:white; /* Rubutu fari */
+      text-align:center; /* Rubutu a tsakiya */
+      padding:10px;
+      margin-top:20px;
+    }
   </style>
 </head>
 <body>
+  <!-- ====== Header Section ====== -->
   <header>
-    <h1>Courses Offered</h1>
+    <h1>Courses Offered</h1> <!-- Babban taken shafin -->
   </header>
 
+  <!-- ====== Navigation Bar ====== -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -38,14 +106,17 @@
     <a href="faq.html">FAQs</a>
   </nav>
 
+  <!-- ====== Main Section: Courses ====== -->
   <section>
+    <!-- Course 1: Computer Science -->
     <div class="course">
       <h3>Computer Science</h3>
       <p>Learn programming, databases, and networks.</p>
-      <button onclick="toggleInfo('cs')">Read More</button>
+      <button onclick="toggleInfo('cs')">Read More</button> <!-- Button ɗin da zai nuna cikakken bayani -->
       <p id="cs" class="hidden">This program covers software engineering, web development, AI, and cybersecurity.</p>
     </div>
 
+    <!-- Course 2: Business Administration -->
     <div class="course">
       <h3>Business Administration</h3>
       <p>Understand business management and leadership.</p>
@@ -53,6 +124,7 @@
       <p id="ba" class="hidden">Includes finance, marketing, entrepreneurship, and organizational leadership.</p>
     </div>
 
+    <!-- Course 3: Education -->
     <div class="course">
       <h3>Education</h3>
       <p>Prepare for a career in teaching and training.</p>
@@ -61,17 +133,20 @@
     </div>
   </section>
 
+  <!-- ====== Footer ====== -->
   <footer>
     <p>&copy; 2025 Educational Institution. All Rights Reserved.</p>
   </footer>
 
+  <!-- ====== JavaScript Section ====== -->
   <script>
+    // Function don toggling tsakanin "Read More" da ɓoye description
     function toggleInfo(id) {
       let el = document.getElementById(id);
       if (el.style.display === "none" || el.style.display === "") {
-        el.style.display = "block";
+        el.style.display = "block"; // Nuna bayanin idan a ɓoye yake
       } else {
-        el.style.display = "none";
+        el.style.display = "none"; // Ɓoye bayanin idan ana nuna shi
       }
     }
   </script>
