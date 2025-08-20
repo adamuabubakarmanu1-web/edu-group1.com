@@ -5,28 +5,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
 
+  <!-- ===== Internal CSS ===== -->
   <style>
-    body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f9f9;}
-    header {background:#004080; color:white; padding:20px; text-align:center;}
-    nav {background:#0066cc; padding:20px; display:flex; gap:20px; overflow-x:auto; white-space:nowrap;}
-    nav a {color:white; text-decoration:none; font-weight:bold; padding:5px 10px; flex-shrink:0;}
-    nav a:hover {text-decoration:underline;}
-
-    section {padding:40px 20px; max-width:1000px; margin:auto; line-height:1.6;}
-    h2 {color:#004080; margin-bottom:20px;}
-    .mission, .vision, .values {
-      background:white; padding:20px; margin-bottom:20px; border-radius:10px;
-      box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    /* Babban jikin page */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
     }
-    ul {margin:0; padding-left:20px;}
-    footer {background:#004080; color:white; text-align:center; padding:10px; margin-top:20px;}
+
+    /* Header (taken shafi) */
+    header {
+      background: #004080;   /* Launin shudi mai duhu */
+      color: white;          /* Rubutu fari */
+      padding: 20px;
+      text-align: center;    /* Tsakiyar rubutu */
+    }
+
+    /* Navigation bar */
+    nav {
+      background: #0066cc;   /* Launi mai haske */
+      padding: 20px;
+      display: flex;         /* Flex domin shirya links */
+      gap: 20px;             /* Tazara tsakanin links */
+      overflow-x: auto;      /* Idan suna da yawa sai a iya juyawa horizontal */
+      white-space: nowrap;   /* Kada su sauka ƙasa */
+    }
+
+    /* Links a cikin nav */
+    nav a {
+      color: white;
+      text-decoration: none; /* Kada a nuna underline */
+      font-weight: bold;
+      padding: 5px 10px;
+      flex-shrink: 0;        /* Kada su matsu idan screen ya yi ƙanƙanta */
+    }
+
+    /* Hover effect ga links */
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Babban section */
+    section {
+      padding: 40px 20px;
+      max-width: 1000px; /* Limit ga faɗin rubutu */
+      margin: auto;      /* Tsakiyar content */
+      line-height: 1.6;  /* Tazara tsakanin layi */
+    }
+
+    /* Taken kowane section */
+    h2 {
+      color: #004080;
+      margin-bottom: 20px;
+    }
+
+    /* Mission, Vision, Values boxes */
+    .mission, .vision, .values {
+      background: white;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 10px; /* Gefuna zagaye */
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ƙananan inuwa */
+    }
+
+    /* Jerin values */
+    ul {
+      margin: 0;
+      padding-left: 20px; /* Dan jan jerin daga hagu */
+    }
+
+    /* Footer */
+    footer {
+      background: #004080;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
+  <!-- ===== Header ===== -->
   <header>
     <h1>About Us</h1>
   </header>
 
+  <!-- ===== Navigation Bar ===== -->
   <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Us</a>
@@ -40,24 +106,35 @@
     <a href="faq.html">FAQs</a>
   </nav>
 
+  <!-- ===== Main Section ===== -->
   <section>
+    <!-- Bayanin makaranta -->
     <h2>Who We Are</h2>
-    <p>Our institution has been dedicated to providing quality education for decades. 
-       We focus on building strong academic foundations while also nurturing creativity, 
-       leadership, and innovation in our students.</p>
+    <p>
+      Our institution has been dedicated to providing quality education for decades. 
+      We focus on building strong academic foundations while also nurturing creativity, 
+      leadership, and innovation in our students.
+    </p>
 
+    <!-- Mission -->
     <div class="mission">
       <h2>Our Mission</h2>
-      <p>To provide accessible, affordable, and high-quality education that empowers students 
-         to achieve academic excellence and contribute positively to society.</p>
+      <p>
+        To provide accessible, affordable, and high-quality education that empowers students 
+        to achieve academic excellence and contribute positively to society.
+      </p>
     </div>
 
+    <!-- Vision -->
     <div class="vision">
       <h2>Our Vision</h2>
-      <p>To be a leading center of learning recognized globally for academic excellence, 
-         research, and community development.</p>
+      <p>
+        To be a leading center of learning recognized globally for academic excellence, 
+        research, and community development.
+      </p>
     </div>
 
+    <!-- Core Values -->
     <div class="values">
       <h2>Our Core Values</h2>
       <ul>
@@ -70,6 +147,7 @@
     </div>
   </section>
 
+  <!-- ===== Footer ===== -->
   <footer>
     <p>&copy; 2025 Educational Institution. All Rights Reserved.</p>
   </footer>
